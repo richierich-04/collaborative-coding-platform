@@ -1,0 +1,11 @@
+node_modules/
+Backend/node_modules/
+Frontend/node_modules/
+
+Backend/data/
+data/
+
+dist/
+.vite/
+.env
+.DS_Store
