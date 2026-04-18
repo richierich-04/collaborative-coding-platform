@@ -13,6 +13,7 @@
   "license": "ISC",
   "type": "module",
   "dependencies": {
+    "bcrypt": "^5.1.1",
     "express": "^5.2.1",
     "socket.io": "^4.8.3",
     "y-leveldb": "^0.2.0",

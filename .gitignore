@@ -1,11 +1,7 @@
-node_modules/
-Backend/node_modules/
-Frontend/node_modules/
-
-Backend/data/
-data/
-
-dist/
-.vite/
+node_modules
+node_modules_old
+Frontend/node_modules
+Backend/node_modules
 .env
-.DS_Store
+dist
+.vite
