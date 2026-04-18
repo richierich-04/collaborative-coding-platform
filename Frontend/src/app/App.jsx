@@ -269,7 +269,7 @@ function CreateRoomModal({ onClose, onCreated, currentUser }) {
         <div className="modal-body">
           <div className="field-group">
             <label className="field-label">Room Name</label>
-            <input className="field-input" type="text" placeholder="my-awesome-room"
+            <input className="field-input" type="text" placeholder=""
               value={roomName} onChange={e => setRoomName(e.target.value.toLowerCase().replace(/\s+/g, "-"))}
               onKeyDown={e => e.key === "Enter" && submit()} autoFocus />
           </div>
