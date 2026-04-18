@@ -914,7 +914,16 @@ function EditorApp({ currentUser, room, isOwner: initialIsOwner, savedPassword, 
     const handshakeOpts = { autoConnect: true };
     if (savedPassword) handshakeOpts.query = { password: savedPassword };
 
-    const provider = new SocketIOProvider(SERVER_URL, room, ydoc, handshakeOpts);
+    //const provider = new SocketIOProvider(SERVER_URL, room, ydoc, handshakeOpts);
+
+    const socketUrl = savedPassword
+    ? `${SERVER_URL}?password=${encodeURIComponent(savedPassword)}`
+    : SERVER_URL;
+  
+    const provider = new SocketIOProvider(socketUrl, room, ydoc, {
+      autoConnect: true,
+    });
+
     providerRef.current = provider;
 
     provider.on("status", ({ status }) => setConnected(status === "connected"));
